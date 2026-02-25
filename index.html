@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>База знаний | Стас</title>
+    <title> ipoStasb knowledgebase </title>
+    
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        /* Скрываем неактивные секции и делаем плавное появление */
+        /* Анимация переключения вкладок */
         .section { display: none; }
         .section.active { display: block; animation: fadeIn 0.3s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* Цвета подстраиваются под тему Telegram пользователя */
+        /* Динамические цвета (подстраиваются под тему Telegram) */
         body {
             background-color: var(--tg-theme-bg-color, #1f2937);
             color: var(--tg-theme-text-color, #ffffff);
@@ -20,17 +22,16 @@
         .bottom-nav { background-color: var(--tg-theme-secondary-bg-color, #111827); }
         .card-bg { background-color: var(--tg-theme-secondary-bg-color, #374151); }
         .accent-text { color: var(--tg-theme-link-color, #60a5fa); }
-        .accent-bg { background-color: var(--tg-theme-button-color, #2563eb); color: var(--tg-theme-button-text-color, #ffffff); }
     </style>
 </head>
 <body class="pb-24 font-sans">
 
     <div id="about" class="section active p-6">
+        
         <div class="flex flex-col items-center text-center mb-6 mt-4">
-                     <div class="w-24 h-24 rounded-full bg-gray-600 mb-4 flex items-center justify-center overflow-hidden shadow-lg border-2 border-gray-700">
+            <div class="w-24 h-24 rounded-full bg-gray-600 mb-4 flex items-center justify-center overflow-hidden shadow-lg border-2 border-gray-700">
                 <img src="IMG_0567.png" alt="Стас" class="w-full h-full object-cover">
             </div>
-
             <h1 class="text-2xl font-bold mb-1 text-white">Стас</h1>
             <p class="accent-text text-sm font-medium">Crazy Artist @ Vertex.CGI</p>
         </div>
@@ -60,202 +61,146 @@
         </div>
     </div>
 
+
     <div id="tutorials" class="section p-4">
-        <h1 class="text-2xl font-bold mb-6 px-2">Дудориалы</h1>
+        <h1 class="text-2xl font-bold mb-6 px-2">#Дудориалы</h1>
         
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
             
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Sprite или Opacity</h2>
-                    <p class="text-xs text-gray-400 mb-3">Разбираемся с оптимизацией и прозрачностью.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/191" data-width="100%" data-dark="1"></script>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">👻 Sprite или Opacity</h2>
+                <p class="text-xs text-gray-400 mb-4">Разбираемся с оптимизацией и прозрачностью в спрайтах и опасити, что выбрать?</p>
+                <a href="https://t.me/ipoSTASb/191" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            </div>
+
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">🔍 Как зумиться в камере C4D</h2>
+                <p class="text-xs text-gray-400 mb-4">Удобная навигация и скрипт для ускорения работы через скрипт, который должен быть у всех.</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/228" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">▶️ Видео</a>
+                    <a href="https://t.me/ipoSTASb/229" class="block w-1/2 text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">📦 Скрипт</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Как зумиться в камере C4D</h2>
-                    <p class="text-xs text-gray-400 mb-3">Удобная навигация и скрипт для ускорения работы.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/228" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3">
-                    <a href="https://t.me/ipoSTASb/229" class="block w-full text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">📦 Скачать скрипт</a>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">🕺 Тесты MoCap сервисов</h2>
+                <p class="text-xs text-gray-400 mb-4">Сравниваем разные нейронки для мокапа по видео.</p>
+                <a href="https://t.me/ipoSTASb/295" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть тесты</a>
+            </div>
+
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">📏 Distance Node в Redshift</h2>
+                <p class="text-xs text-gray-400 mb-4">Разбор (бес)полезной ноды для шейдинга.</p>
+                <a href="https://t.me/ipoSTASb/306" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            </div>
+
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">💥 Уничтожаем геометрию с UV</h2>
+                <p class="text-xs text-gray-400 mb-4">Делаем грязь с геометрией но сохраняем развертку, без Volume Builder, конечно же.</p>
+                <a href="https://t.me/ipoSTASb/309" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            </div>
+
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">🧪 Правильная пипетка в C4D</h2>
+                <p class="text-xs text-gray-400 mb-4">Как использовать этот инструмент на 100%, когда клиент пишет что нужен идеальный бренд цвет!</p>
+                <a href="https://t.me/ipoSTASb/320" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            </div>
+
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">💡 Фейковая каустика</h2>
+                <p class="text-xs text-gray-400 mb-4">Красивые отражения без боли для рендера и жопы. </p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/344" class="block w-1/3 text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">▶️ Видео</a>
+                    <a href="https://t.me/ipoSTASb/342" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-semibold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">Пост</a>
+                    <a href="https://t.me/ipoSTASb/343" class="block w-1/3 text-center bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">📦 Проект</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Тесты MoCap сервисов</h2>
-                    <p class="text-xs text-gray-400 mb-3">Сравниваем разные нейронки для мокапа по видео.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/295" data-width="100%" data-dark="1"></script>
-                </div>
-            </div>
-
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Distance Node в Redshift</h2>
-                    <p class="text-xs text-gray-400 mb-3">Разбор полезной ноды для шейдинга.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/306" data-width="100%" data-dark="1"></script>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">🏷️ Разбираем Tension Tag</h2>
+                <p class="text-xs text-gray-400 mb-4">Работа со старым, но полезным тегом и скачиваем файл проекта.</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/358" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">▶️ Видео</a>
+                    <a href="https://t.me/ipoSTASb/359" class="block w-1/2 text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">📦 Проект</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Уничтожаем геометрию с UV</h2>
-                    <p class="text-xs text-gray-400 mb-3">Делаем разрушения с сохранением развертки, без Volume Builder.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/309" data-width="100%" data-dark="1"></script>
-                </div>
-            </div>
-
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Правильная пипетка в C4D</h2>
-                    <p class="text-xs text-gray-400 mb-3">Как использовать этот инструмент на 100%.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/320" data-width="100%" data-dark="1"></script>
-                </div>
-            </div>
-
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Фейковая каустика</h2>
-                    <p class="text-xs text-gray-400 mb-3">Красивые отражения без боли для рендера.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/344" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3 flex gap-2">
-                    <a href="https://t.me/ipoSTASb/342" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">Читать пост</a>
-                    <a href="https://t.me/ipoSTASb/343" class="block w-1/2 text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">📦 Проект C4D</a>
-                </div>
-            </div>
-
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Разбираем Tension Tag</h2>
-                    <p class="text-xs text-gray-400 mb-3">Работа со старым тегом и файл проекта.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/358" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3">
-                    <a href="https://t.me/ipoSTASb/359" class="block w-full text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">📦 Скачать проект</a>
-                </div>
-            </div>
-
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg text-white">Spline Modifier</h2>
-                    <p class="text-xs text-gray-400 mb-3">Как работает модификатор сплайнов.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/416" data-width="100%" data-dark="1"></script>
-                </div>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg text-white mb-1">➰ Spline Modifier</h2>
+                <p class="text-xs text-gray-400 mb-4">Как работает данная херобора, зачем нужна и почему?</p>
+                <a href="https://t.me/ipoSTASb/416" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
             </div>
 
         </div>
     </div>
+
 
     <div id="plugins" class="section p-4">
         <h1 class="text-2xl font-bold mb-6 px-2">Мои Плагины</h1>
         
-        <div class="flex flex-col gap-6">
+        <div class="flex flex-col gap-4">
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1 border border-gray-700">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg accent-text mb-1">SupaPupaMagic Adjust</h2>
-                    <p class="text-xs text-gray-300 mb-2">Делает магию, как AutoAdjust в CapCut!</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/422" data-width="100%" data-dark="1"></script>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg accent-text mb-1">🪄 SupaPupaMagic Adjust</h2>
+                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">After Effects</div>
+                <p class="text-xs text-gray-300 mb-4">Делает магию, как AutoAdjust в CapCut!</p>
+                <a href="https://t.me/ipoSTASb/422" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-lg transition-colors">▶️ Обзор и плагин</a>
+            </div>
+
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg accent-text mb-1">🎚️ LazyLevels</h2>
+                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">After Effects</div>
+                <p class="text-xs text-gray-300 mb-4">Скрипт который делает Levels как Grade в нюке! (пока только скрипт - плагин позже).</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/423" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Обзор</a>
+                    <a href="https://t.me/ipoSTASb/424" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📦 Скрипт (.jsx)</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1 border border-gray-700">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg accent-text mb-1">LazyLevels</h2>
-                    <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">After Effects</div>
-                    <p class="text-xs text-gray-300 mb-2">Скрипт для удобной и быстрой работы с уровнями.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/423" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3">
-                    <a href="https://t.me/ipoSTASb/424" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-3 px-4 rounded-lg transition-colors">📦 Скачать скрипт (.jsx)</a>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg accent-text mb-1">🎭 Agamograph Generator</h2>
+                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
+                <p class="text-xs text-gray-300 mb-4">Скрипт, который полуавтоматически собирает эффект агамографа. тут лучше погуглить что это, чем писать мне тут.</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/427" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Превью</a>
+                    <a href="https://t.me/ipoSTASb/426" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📖 Описание</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1 border border-gray-700">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg accent-text mb-1">Agamograph Generator</h2>
-                    <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
-                    <p class="text-xs text-gray-300 mb-2">Скрипт, который автоматически собирает эффект агамографа.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/427" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3">
-                    <a href="https://t.me/ipoSTASb/426" class="block w-full text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-4 rounded-lg transition-colors">📖 Читать пост про скрипт</a>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg accent-text mb-1">🎨 RS Material Loader</h2>
+                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Redshift</div>
+                <p class="text-xs text-gray-300 mb-4">Удобный загрузчик материалов для Redshift.сам всё соберет, сам все распихает как нужно — без головняка.</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/431" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-bold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">▶️ Обзор</a>
+                    <a href="https://t.me/ipoSTASb/429" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-bold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">Пост</a>
+                    <a href="https://t.me/ipoSTASb/430" class="block w-1/3 text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">📦 Плагин</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1 border border-gray-700">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg accent-text mb-1">RS Material Loader</h2>
-                    <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Redshift</div>
-                    <p class="text-xs text-gray-300 mb-2">Удобный загрузчик материалов для Redshift.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/431" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3 flex gap-2">
-                    <a href="https://t.me/ipoSTASb/429" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-bold py-3 px-1 rounded-lg transition-colors flex items-center justify-center">Описание</a>
-                    <a href="https://t.me/ipoSTASb/430" class="block w-2/3 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-3 px-2 rounded-lg transition-colors flex items-center justify-center">📦 Скачать плагин</a>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg accent-text mb-1">✂️ LazyMaterialist</h2>
+                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
+                <p class="text-xs text-gray-300 mb-4">Разрезает объект по polygon islands. Незаменимая вещь для текстурирования ворованных моделек xD</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/436" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Обзор</a>
+                    <a href="https://t.me/ipoSTASb/435" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📦 Плагин</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1 border border-gray-700">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg accent-text mb-1">LazyMaterialist</h2>
-                    <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
-                    <p class="text-xs text-gray-300 mb-2">Разрезает объект по polygon islands. Незаменимая вещь для текстурирования.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/436" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3">
-                    <a href="https://t.me/ipoSTASb/435" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-3 px-4 rounded-lg transition-colors">📦 Скачать плагин</a>
-                </div>
-            </div>
-
-            <div class="card-bg rounded-xl overflow-hidden shadow-lg p-1 border border-gray-700">
-                <div class="p-3">
-                    <h2 class="font-bold text-lg accent-text mb-1">Lazy Projector</h2>
-                    <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
-                    <p class="text-xs text-gray-300 mb-2">Набор тулзов для проекций.</p>
-                </div>
-                <div class="bg-black flex justify-center w-full rounded-lg overflow-hidden">
-                    <script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="ipoSTASb/443" data-width="100%" data-dark="1"></script>
-                </div>
-                <div class="p-3">
-                    <a href="https://t.me/ipoSTASb/441" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-3 px-4 rounded-lg transition-colors">📦 Скачать архивы</a>
+            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
+                <h2 class="font-bold text-lg accent-text mb-1">📽️ Lazy Projector</h2>
+                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
+                <p class="text-xs text-gray-300 mb-4">Набор тулзов для однокнопочных ленивых проекций.</p>
+                <div class="flex gap-2">
+                    <a href="https://t.me/ipoSTASb/443" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Обзор</a>
+                    <a href="https://t.me/ipoSTASb/441" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📦 Архивы</a>
                 </div>
             </div>
 
         </div>
     </div>
+
 
     <div id="bots" class="section p-4">
         <h1 class="text-2xl font-bold mb-6 px-2">Мои Боты</h1>
@@ -287,6 +232,7 @@
         </div>
     </div>
 
+
     <div class="bottom-nav fixed bottom-0 w-full flex justify-between px-2 py-3 border-t border-gray-800 z-50">
         <button onclick="showSection('about')" id="btn-about" class="nav-btn flex flex-col items-center w-1/4 text-sm text-gray-400 transition-colors">
             <span class="text-xl mb-1">👤</span>
@@ -306,31 +252,32 @@
         </button>
     </div>
 
+
     <script>
-        // Сообщаем Телеграму, что приложение готово
+        // Инициализация Telegram WebApp
         const tg = window.Telegram.WebApp;
         tg.expand();
         tg.ready();
 
-        // Логика переключения вкладок
+        // Функция для переключения вкладок
         function showSection(id) {
-            // Скрываем все секции
+            // Скрываем все разделы
             document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-            // Сбрасываем цвета кнопок
+            // Сбрасываем цвета всех кнопок в меню
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.replace('accent-text', 'text-gray-400'));
             
-            // Показываем нужную секцию
+            // Показываем нужный раздел
             document.getElementById(id).classList.add('active');
-            // Подсвечиваем активную кнопку
+            // Подсвечиваем нажатую кнопку
             document.getElementById('btn-' + id).classList.replace('text-gray-400', 'accent-text');
             
-            // Легкая вибрация при клике (работает только внутри Telegram)
+            // Легкая вибрация при клике (работает на мобильных)
             if (tg.HapticFeedback) {
                 tg.HapticFeedback.impactOccurred('light');
             }
         }
 
-        // Подсвечиваем первую кнопку при загрузке
+        // Делаем кнопку "Обо мне" активной при старте
         document.getElementById('btn-about').classList.replace('text-gray-400', 'accent-text');
     </script>
 </body>
