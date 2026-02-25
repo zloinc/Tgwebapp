@@ -3,308 +3,307 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title> ipoStasb knowledgebase </title>
+    <title>ipoStas'b Knowledgebase</title>
     
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
-        <style>
-        /* Анимация переключения вкладок */
-        .section { display: none; }
-        .section.active { display: block; animation: fadeIn 0.3s ease-in-out; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        
-        /* ПРИНУДИТЕЛЬНАЯ ТЕМНАЯ ТЕМА */
-                /* КАСТОМНЫЙ ФОН И МАТОВОЕ СТЕКЛО */
+    <style>
+        /* ПРИНУДИТЕЛЬНЫЙ DARK MODE И КАСТОМНЫЙ ФОН */
         body {
-            /* Замени bg.jpg на название своего файла, если оно другое */
             background-image: url('IMG_0570.png'); 
-            background-size: cover;          /* Растягиваем на весь экран */
-            background-position: center;     /* Центрируем картинку */
-            background-attachment: fixed;    /* Фон стоит на месте при скролле (выглядит дорого) */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-color: #111827;
             color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         }
-        .bottom-nav { 
-            background-color: rgba(17, 24, 39, 0.85); /* Слегка прозрачное черное меню */
-            backdrop-filter: blur(12px);              /* Эффект размытия под меню */
-            border-top: 1px solid rgba(255, 255, 255, 0.1); 
-        } 
+
+        /* ЭФФЕКТ МАТОВОГО СТЕКЛА ДЛЯ КАРТОЧЕК */
         .card-bg { 
-            background-color: rgba(31, 41, 55, 0.75); /* Полупрозрачные темно-серые карточки */
-            backdrop-filter: blur(10px);              /* Матовое стекло под карточками */
-            border: 1px solid rgba(255, 255, 255, 0.05); /* Легкая светлая рамка */
-        }
-        .accent-text { 
-            color: #60a5fa;            
+            background-color: rgba(31, 41, 55, 0.75); 
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .bottom-nav { 
-            background-color: #1f2937; /* Темно-серая нижняя панель */
-            border-top: 1px solid #374151; /* Заметная граница меню */
-        } 
-        .card-bg { 
-            background-color: #1f2937; /* Темно-серые карточки */
+            background-color: rgba(17, 24, 39, 0.9); 
+            backdrop-filter: blur(15px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1); 
         }
-        .accent-text { 
-            color: #60a5fa;            /* Яркий голубой цвет для акцентов */
+
+        .accent-text { color: #60a5fa; }
+
+        /* АНИМАЦИИ ПЕРЕКЛЮЧЕНИЯ */
+        .section { display: none; }
+        .section.active { display: block; animation: fadeIn 0.3s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ДИСКО-ФОН ДЛЯ ПАСХАЛКИ */
+        @keyframes disco {
+            0% { background: linear-gradient(45deg, #ff0080, #7928ca); }
+            33% { background: linear-gradient(45deg, #0070f3, #00dfd8); }
+            66% { background: linear-gradient(45deg, #f59e0b, #ef4444); }
+            100% { background: linear-gradient(45deg, #ff0080, #7928ca); }
+        }
+        .animate-disco {
+            animation: disco 3s infinite alternate;
+            background-size: 200% 200%;
         }
     </style>
-
 </head>
-<body class="pb-24 font-sans">
+<body class="pb-24 overflow-x-hidden">
 
     <div id="about" class="section active p-6">
-        
         <div class="flex flex-col items-center text-center mb-6 mt-4">
-            <div class="w-24 h-24 rounded-full bg-gray-600 mb-4 flex items-center justify-center overflow-hidden shadow-lg border-2 border-gray-700">
+            <div id="avatar-img" onclick="tapAvatar()" class="w-24 h-24 rounded-full bg-gray-600 mb-4 flex items-center justify-center overflow-hidden shadow-2xl border-2 border-white/20 cursor-pointer transform active:scale-95 transition-transform">
                 <img src="IMG_0567.png" alt="Стас" class="w-full h-full object-cover">
             </div>
-            <h1 class="text-2xl font-bold mb-1 text-white">TG: ipoStas'ь 👻</h1>
+            <h1 class="text-2xl font-bold mb-1 text-white">TG:ipoStas'ь 👻</h1>
             <p class="accent-text text-sm font-medium">Crazy Artist @ Vertex.CGI</p>
         </div>
         
-        <div class="card-bg rounded-xl p-5 shadow-lg flex flex-col gap-4 border border-gray-700">
+        <div class="card-bg rounded-2xl p-5 shadow-xl flex flex-col gap-4">
             <h2 class="font-bold text-lg text-white mb-1">Ну что ж, комрадс, давайте начнем? 👋</h2>
             
-            <p class="text-sm leading-relaxed text-gray-300">
-                Привет, я <strong>Стас</strong>! Работаю в <strong>Vertex.CGI</strong> с общим опытом в графике около 15 лет ⌛. Начинал ещё на заре Andrew Kramer 🎥, когда 3D казался чем‑то из будущего, и дошел из несостоявшегося переводчика норвежского 🇳🇴 до <strong>Lead Artist</strong> 🏆 в топ‑1 креативной студии по виральному контенту 🪄.
-            </p>
-            
-            <p class="text-sm leading-relaxed text-gray-300">
-                Обожаю работать в <strong>Cinema 4D</strong> 🚀 вместе с <strong>Redshift</strong> 🔴, <strong>After Effects</strong> уже давно течет у меня по венам, но всегда открыт новому: Nuke 💣, Substance 🧪, Janga FX ✨ и разные забавные плагины для Blender 🍰 уже давно в моём арсенале. Периодически записываю всякие «дудориалы» на индусский манер, которыми буду тут делиться.
-            </p>
-            
-            <p class="text-sm leading-relaxed text-gray-300">
-                Последнее время решил заняться написанием разных плагинов для работы в After Effects и Cinema4D, чем делюсь в канале тут письменно и в видеоформате!
-            </p>
-            
-            <p class="text-sm leading-relaxed text-gray-300">
-                Когда нужно «отключить мозг» 🧠, я ныряю в компьютерные игры 🎮 (раньше был хардкорщик в WoW ⚔️, теперь с друзьями в PUBG 🪂) и гоняю в волейбол 🏐 для разрядки.
-            </p>
-            
-            <p class="text-sm leading-relaxed text-gray-300">
-                В целом канал будет как склад мыслей, видосов и как место для моего графоманства. Так что тут не только графика, но и Я и всякие мои движения. Ну что, кратко познакомились! 🤝
-            </p>
+            <div class="text-sm leading-relaxed text-gray-200 space-y-4">
+                <p>Привет, я <strong>Стас</strong>! Работаю в <strong>Vertex.CGI</strong> с общим опытом в графике около 15 лет ⌛. Начинал ещё на заре Andrew Kramer 🎥 дошел до <strong>Lead Artist</strong> 🏆 в топ‑1 креативной студии по виральному контенту 🪄.</p>
+                <p>Обожаю работать в <strong>Cinema 4D</strong> 🚀 + <strong>Redshift</strong> 🔴. After Effects течет по венам, но открыт всему: Nuke 💣, Substance 🧪, Janga FX ✨ и плагины для Blender 🍰. Периодически записываю «дудориалы» на индусский манер.</p>
+                <p>Когда нужно «отключить мозг» 🧠 — ныряю в игры 🎮 (PUBG 🪂) или гоняю в волейбол 🏐.</p>
+            </div>
+
+            <div class="mt-4 pt-6 border-t border-white/10">
+                <p class="text-[10px] text-center text-gray-400 mb-3 uppercase tracking-widest">Support the creator</p>
+                <a href="tg://resolve?domain=Ipostasbot&start=donate" class="block w-full text-center bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-gray-900 font-black py-3 px-4 rounded-xl shadow-lg transform transition active:scale-95 flex items-center justify-center gap-2 uppercase text-xs">
+                    <span>⭐️</span> Поддержать Звёздами
+                </a>
+            </div>
         </div>
     </div>
 
 
     <div id="tutorials" class="section p-4">
-        <h1 class="text-2xl font-bold mb-6 px-2">#Дудориалы</h1>
-        
+        <h1 class="text-2xl font-bold mb-6 px-2">Дудориалы 🎬</h1>
         <div class="flex flex-col gap-4">
             
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">👻 Sprite или Opacity</h2>
-                <p class="text-xs text-gray-400 mb-4">Разбираемся с оптимизацией и прозрачностью в спрайтах и опасити, что выбрать?</p>
-                <a href="https://t.me/ipoSTASb/191" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">👻 Sprite или Opacity</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Оптимизация и прозрачность</p>
+                <a href="https://t.me/ipoSTASb/191" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg">СМОТРЕТЬ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">🔍 Как зумиться в камере C4D</h2>
-                <p class="text-xs text-gray-400 mb-4">Удобная навигация и скрипт для ускорения работы через скрипт, который должен быть у всех.</p>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">🔍 Зум в камере C4D</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Удобная навигация + скрипт</p>
                 <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/228" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">▶️ Видео</a>
-                    <a href="https://t.me/ipoSTASb/229" class="block w-1/2 text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">📦 Скрипт</a>
+                    <a href="https://t.me/ipoSTASb/228" class="flex-1 text-center bg-blue-600 text-white text-xs font-bold py-2 rounded-lg">ВИДЕО</a>
+                    <a href="https://t.me/ipoSTASb/229" class="flex-1 text-center bg-gray-700 text-white text-xs font-bold py-2 rounded-lg">СКРИПТ</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">🕺 Тесты MoCap сервисов</h2>
-                <p class="text-xs text-gray-400 mb-4">Сравниваем разные нейронки для мокапа по видео.</p>
-                <a href="https://t.me/ipoSTASb/295" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть тесты</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">🕺 MoCap сервисы</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Тесты нейронок для мокапа</p>
+                <a href="https://t.me/ipoSTASb/295" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg">СМОТРЕТЬ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">📏 Distance Node в Redshift</h2>
-                <p class="text-xs text-gray-400 mb-4">Разбор (бес)полезной ноды для шейдинга.</p>
-                <a href="https://t.me/ipoSTASb/306" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">📏 Distance Node Redshift</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Полезная нода для шейдинга</p>
+                <a href="https://t.me/ipoSTASb/306" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg">СМОТРЕТЬ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">💥 Уничтожаем геометрию с UV</h2>
-                <p class="text-xs text-gray-400 mb-4">Делаем грязь с геометрией но сохраняем развертку, без Volume Builder, конечно же.</p>
-                <a href="https://t.me/ipoSTASb/309" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">💥 Разрушение с UV</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Без Volume Builder</p>
+                <a href="https://t.me/ipoSTASb/309" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg">СМОТРЕТЬ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">🧪 Правильная пипетка в C4D</h2>
-                <p class="text-xs text-gray-400 mb-4">Как использовать этот инструмент на 100%, когда клиент пишет что нужен идеальный бренд цвет!</p>
-                <a href="https://t.me/ipoSTASb/320" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">🧪 Пипетка в C4D</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Правильное использование</p>
+                <a href="https://t.me/ipoSTASb/320" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg">СМОТРЕТЬ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">💡 Фейковая каустика</h2>
-                <p class="text-xs text-gray-400 mb-4">Красивые отражения без боли для рендера и жопы. </p>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">💡 Фейковая каустика</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Красивый рендер без боли</p>
                 <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/344" class="block w-1/3 text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">▶️ Видео</a>
-                    <a href="https://t.me/ipoSTASb/342" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-semibold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">Пост</a>
-                    <a href="https://t.me/ipoSTASb/343" class="block w-1/3 text-center bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">📦 Проект</a>
+                    <a href="https://t.me/ipoSTASb/344" class="flex-1 text-center bg-blue-600 text-white text-[10px] font-bold py-2 rounded-lg">ВИДЕО</a>
+                    <a href="https://t.me/ipoSTASb/343" class="flex-1 text-center bg-gray-700 text-white text-[10px] font-bold py-2 rounded-lg">ПРОЕКТ</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">🏷️ Разбираем Tension Tag</h2>
-                <p class="text-xs text-gray-400 mb-4">Работа со старым, но полезным тегом и скачиваем файл проекта.</p>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">🏷️ Tension Tag</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Работа со старым тегом</p>
                 <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/358" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">▶️ Видео</a>
-                    <a href="https://t.me/ipoSTASb/359" class="block w-1/2 text-center bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold py-2 px-2 rounded-lg transition-colors">📦 Проект</a>
+                    <a href="https://t.me/ipoSTASb/358" class="flex-1 text-center bg-blue-600 text-white text-xs font-bold py-2 rounded-lg">ВИДЕО</a>
+                    <a href="https://t.me/ipoSTASb/359" class="flex-1 text-center bg-gray-700 text-white text-xs font-bold py-2 rounded-lg">ПРОЕКТ</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg text-white mb-1">➰ Spline Modifier</h2>
-                <p class="text-xs text-gray-400 mb-4">Как работает данная херобора, зачем нужна и почему?</p>
-                <a href="https://t.me/ipoSTASb/416" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold py-2 px-4 rounded-lg transition-colors">▶️ Смотреть туториал</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-white mb-1">➰ Spline Modifier</h2>
+                <p class="text-[10px] text-gray-400 mb-4">Разбор модификатора</p>
+                <a href="https://t.me/ipoSTASb/416" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-2 px-4 rounded-lg">СМОТРЕТЬ</a>
             </div>
-
         </div>
     </div>
 
 
     <div id="plugins" class="section p-4">
-        <h1 class="text-2xl font-bold mb-6 px-2">Мои Плагины</h1>
-        
+        <h1 class="text-2xl font-bold mb-6 px-2">Плагины 🧩</h1>
         <div class="flex flex-col gap-4">
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg accent-text mb-1">🪄 SupaPupaMagic Adjust</h2>
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">After Effects</div>
-                <p class="text-xs text-gray-300 mb-4">Делает магию, как AutoAdjust в CapCut!</p>
-                <a href="https://t.me/ipoSTASb/422" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded-lg transition-colors">▶️ Обзор и плагин</a>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-blue-400 mb-1">🪄 SupaPupaMagic Adjust</h2>
+                <div class="inline-block px-2 py-0.5 bg-blue-900/50 text-[9px] rounded text-blue-200 uppercase mb-3">After Effects</div>
+                <p class="text-xs text-gray-300 mb-4">Магия AutoAdjust в один клик</p>
+                <a href="https://t.me/ipoSTASb/422" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-lg">ОБЗОР И СКАЧАТЬ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg accent-text mb-1">🎚️ LazyLevels</h2>
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">After Effects</div>
-                <p class="text-xs text-gray-300 mb-4">Скрипт который делает Levels как Grade в нюке! (пока только скрипт - плагин позже).</p>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-blue-400 mb-1">🎚️ LazyLevels</h2>
+                <div class="inline-block px-2 py-0.5 bg-blue-900/50 text-[9px] rounded text-blue-200 uppercase mb-3">After Effects</div>
+                <p class="text-xs text-gray-300 mb-4">Быстрая работа с уровнями</p>
                 <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/423" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Обзор</a>
-                    <a href="https://t.me/ipoSTASb/424" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📦 Скрипт (.jsx)</a>
+                    <a href="https://t.me/ipoSTASb/423" class="flex-1 text-center border border-white/20 text-white text-xs font-bold py-3 rounded-lg">ОБЗОР</a>
+                    <a href="https://t.me/ipoSTASb/424" class="flex-1 text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-lg">JSX СКРИПТ</a>
                 </div>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg accent-text mb-1">🎭 Agamograph Generator</h2>
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
-                <p class="text-xs text-gray-300 mb-4">Скрипт, который полуавтоматически собирает эффект агамографа. тут лучше погуглить что это, чем писать мне тут.</p>
-                <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/427" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Превью</a>
-                    <a href="https://t.me/ipoSTASb/426" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📖 Описание</a>
-                </div>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-blue-400 mb-1">🎭 Agamograph Gen</h2>
+                <div class="inline-block px-2 py-0.5 bg-orange-900/50 text-[9px] rounded text-orange-200 uppercase mb-3">Cinema 4D</div>
+                <p class="text-xs text-gray-300 mb-4">Авто-эффект агамографа</p>
+                <a href="https://t.me/ipoSTASb/426" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-lg">СКАЧАТЬ СКРИПТ</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg accent-text mb-1">🎨 RS Material Loader</h2>
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Redshift</div>
-                <p class="text-xs text-gray-300 mb-4">Удобный загрузчик материалов для Redshift.сам всё соберет, сам все распихает как нужно — без головняка.</p>
-                <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/431" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-bold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">▶️ Обзор</a>
-                    <a href="https://t.me/ipoSTASb/429" class="block w-1/3 text-center border border-gray-600 hover:bg-gray-700 text-white text-xs font-bold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">Пост</a>
-                    <a href="https://t.me/ipoSTASb/430" class="block w-1/3 text-center bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold py-2 px-1 rounded-lg transition-colors flex items-center justify-center">📦 Плагин</a>
-                </div>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-blue-400 mb-1">🎨 RS Material Loader</h2>
+                <div class="inline-block px-2 py-0.5 bg-red-900/50 text-[9px] rounded text-red-200 uppercase mb-3">Redshift</div>
+                <p class="text-xs text-gray-300 mb-4">Удобный загрузчик материалов</p>
+                <a href="https://t.me/ipoSTASb/430" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-lg">СКАЧАТЬ ПЛАГИН</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg accent-text mb-1">✂️ LazyMaterialist</h2>
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
-                <p class="text-xs text-gray-300 mb-4">Разрезает объект по polygon islands. Незаменимая вещь для текстурирования ворованных моделек xD</p>
-                <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/436" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Обзор</a>
-                    <a href="https://t.me/ipoSTASb/435" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📦 Плагин</a>
-                </div>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-blue-400 mb-1">✂️ LazyMaterialist</h2>
+                <div class="inline-block px-2 py-0.5 bg-orange-900/50 text-[9px] rounded text-orange-200 uppercase mb-3">Cinema 4D</div>
+                <p class="text-xs text-gray-300 mb-4">Разрез по Polygon Islands</p>
+                <a href="https://t.me/ipoSTASb/435" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-lg">СКАЧАТЬ ПЛАГИН</a>
             </div>
 
-            <div class="card-bg rounded-xl p-4 shadow-lg border border-gray-700">
-                <h2 class="font-bold text-lg accent-text mb-1">📽️ Lazy Projector</h2>
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded mb-2 text-gray-300 uppercase tracking-wider">Cinema 4D</div>
-                <p class="text-xs text-gray-300 mb-4">Набор тулзов для однокнопочных ленивых проекций.</p>
-                <div class="flex gap-2">
-                    <a href="https://t.me/ipoSTASb/443" class="block w-1/2 text-center border border-gray-600 hover:bg-gray-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">▶️ Обзор</a>
-                    <a href="https://t.me/ipoSTASb/441" class="block w-1/2 text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-2 px-2 rounded-lg transition-colors">📦 Архивы</a>
-                </div>
+            <div class="card-bg rounded-xl p-4 border border-white/10">
+                <h2 class="font-bold text-blue-400 mb-1">📽️ Lazy Projector</h2>
+                <div class="inline-block px-2 py-0.5 bg-orange-900/50 text-[9px] rounded text-orange-200 uppercase mb-3">Cinema 4D</div>
+                <p class="text-xs text-gray-300 mb-4">Набор тулзов для проекций</p>
+                <a href="https://t.me/ipoSTASb/441" class="block w-full text-center bg-blue-600 text-white text-xs font-bold py-3 rounded-lg">СКАЧАТЬ АРХИВЫ</a>
             </div>
-
         </div>
     </div>
 
 
     <div id="bots" class="section p-4">
-        <h1 class="text-2xl font-bold mb-6 px-2">Мои Боты</h1>
-        
-        <div class="flex flex-col gap-6">
-            
-            <div class="card-bg rounded-xl p-5 shadow-lg flex flex-col gap-3 border border-gray-700">
-                <div class="flex items-center gap-3 mb-2">
-                    <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-2xl border border-gray-600">
-                        🤖
-                    </div>
-                    <div>
-                        <h2 class="font-bold text-xl accent-text">RS Render Bot</h2>
-                        <span class="text-xs text-gray-400">@rs_render_bot</span>
-                    </div>
+        <h1 class="text-2xl font-bold mb-6 px-2">Боты 🤖</h1>
+        <div class="card-bg rounded-2xl p-6 border border-white/10">
+            <div class="flex items-center gap-4 mb-4">
+                <div class="text-4xl">🤖</div>
+                <div>
+                    <h2 class="font-bold text-xl accent-text">RS Render Bot</h2>
+                    <p class="text-[10px] text-gray-400 uppercase">@rs_render_bot</p>
                 </div>
-                
-                <div class="inline-block px-2 py-1 bg-gray-800 text-[10px] rounded w-max mb-1 text-gray-300 uppercase tracking-wider">Мониторинг рендера</div>
-                
-                <p class="text-sm text-gray-300 mb-2">
-                    Бот, который позволяет следить за тем, как идет рендер на компе, прямо через Telegram. Получай уведомления о статусе и готовности, чтобы не сидеть у монитора в ожидании.
-                </p>
-                
-                <a href="tg://resolve?domain=rs_render_bot" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white text-sm font-bold py-3 px-4 rounded-lg mt-2 transition-colors flex items-center justify-center gap-2">
-                    Перейти к боту 🚀
-                </a>
             </div>
-
+            <p class="text-sm text-gray-300 mb-6">Следи за рендером прямо в Telegram. Уведомления о статусе и финише — больше не нужно сидеть у монитора.</p>
+            <a href="tg://resolve?domain=rs_render_bot" class="block w-full text-center bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg">ЗАПУСТИТЬ БОТА</a>
         </div>
     </div>
 
 
-    <div class="bottom-nav fixed bottom-0 w-full flex justify-between px-2 py-3 border-t border-gray-800 z-50">
-        <button onclick="showSection('about')" id="btn-about" class="nav-btn flex flex-col items-center w-1/4 text-sm text-gray-400 transition-colors">
+    <div id="secret" class="section p-0 h-screen relative overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-50 animate-disco"></div>
+        <div class="relative z-10 p-6 flex flex-col items-center justify-center h-full text-center">
+            <div class="text-6xl mb-6 drop-shadow-2xl animate-pulse">🕺</div>
+            <h2 class="font-black text-3xl text-white mb-2 italic uppercase">Secret Vibe Only</h2>
+            <p class="text-sm text-pink-100 mb-8 font-medium">Render-party starts now!</p>
+            
+            <div class="w-full max-w-xs bg-white/10 backdrop-blur-2xl rounded-3xl p-6 border border-white/20 shadow-2xl">
+                <div class="mb-4">
+                    <div class="text-[10px] uppercase tracking-widest text-pink-300 font-bold mb-1">Now Playing</div>
+                    <div class="text-white font-bold truncate">Exclusive track by bzrd</div>
+                </div>
+                <audio id="secret-player" controls class="w-full h-10 invert brightness-200 opacity-80">
+                    <source src="track.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            
+            <button onclick="showSection('about')" class="mt-12 px-8 py-3 border border-white/30 rounded-full text-[10px] text-white/60 uppercase tracking-widest active:bg-white/10">Вернуться</button>
+        </div>
+    </div>
+
+
+    <div class="bottom-nav fixed bottom-0 w-full flex justify-between px-2 py-3 z-50">
+        <button onclick="showSection('about')" id="btn-about" class="nav-btn flex flex-col items-center w-1/4 text-gray-400 transition-colors">
             <span class="text-xl mb-1">👤</span>
-            <span class="text-[10px] font-medium uppercase tracking-wider">Обо мне</span>
+            <span class="text-[8px] font-bold uppercase tracking-tighter">Обо мне</span>
         </button>
-        <button onclick="showSection('tutorials')" id="btn-tutorials" class="nav-btn flex flex-col items-center w-1/4 text-sm text-gray-400 transition-colors">
+        <button onclick="showSection('tutorials')" id="btn-tutorials" class="nav-btn flex flex-col items-center w-1/4 text-gray-400 transition-colors">
             <span class="text-xl mb-1">🎬</span>
-            <span class="text-[10px] font-medium uppercase tracking-wider">Дудориалы</span>
+            <span class="text-[8px] font-bold uppercase tracking-tighter">Уроки</span>
         </button>
-        <button onclick="showSection('plugins')" id="btn-plugins" class="nav-btn flex flex-col items-center w-1/4 text-sm text-gray-400 transition-colors">
+        <button onclick="showSection('plugins')" id="btn-plugins" class="nav-btn flex flex-col items-center w-1/4 text-gray-400 transition-colors">
             <span class="text-xl mb-1">🧩</span>
-            <span class="text-[10px] font-medium uppercase tracking-wider">Плагины</span>
+            <span class="text-[8px] font-bold uppercase tracking-tighter">Плагины</span>
         </button>
-        <button onclick="showSection('bots')" id="btn-bots" class="nav-btn flex flex-col items-center w-1/4 text-sm text-gray-400 transition-colors">
+        <button onclick="showSection('bots')" id="btn-bots" class="nav-btn flex flex-col items-center w-1/4 text-gray-400 transition-colors">
             <span class="text-xl mb-1">🤖</span>
-            <span class="text-[10px] font-medium uppercase tracking-wider">Боты</span>
+            <span class="text-[8px] font-bold uppercase tracking-tighter">Боты</span>
         </button>
     </div>
 
 
     <script>
-        // Инициализация Telegram WebApp
         const tg = window.Telegram.WebApp;
         tg.expand();
         tg.ready();
 
-        // Функция для переключения вкладок
+        let tapCount = 0;
+        let isSecretOpen = false;
+
         function showSection(id) {
-            // Скрываем все разделы
             document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
-            // Сбрасываем цвета всех кнопок в меню
             document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.replace('accent-text', 'text-gray-400'));
             
-            // Показываем нужный раздел
             document.getElementById(id).classList.add('active');
-            // Подсвечиваем нажатую кнопку
-            document.getElementById('btn-' + id).classList.replace('text-gray-400', 'accent-text');
+            if (id !== 'secret') {
+                document.getElementById('btn-' + id).classList.replace('text-gray-400', 'accent-text');
+                const player = document.getElementById('secret-player');
+                player.pause();
+                isSecretOpen = false;
+                tapCount = 0;
+            }
             
-            // Легкая вибрация при клике (работает на мобильных)
-            if (tg.HapticFeedback) {
-                tg.HapticFeedback.impactOccurred('light');
+            if (tg.HapticFeedback) tg.HapticFeedback.impactOccurred('light');
+        }
+
+        function tapAvatar() {
+            if (isSecretOpen) return;
+            tapCount++;
+            if (tg.HapticFeedback) tg.HapticFeedback.impactOccurred('medium');
+
+            if (tapCount === 5) {
+                isSecretOpen = true;
+                if (tg.HapticFeedback) tg.HapticFeedback.notificationOccurred('success');
+                
+                document.querySelectorAll('.section').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.replace('accent-text', 'text-gray-400'));
+                
+                document.getElementById('secret').classList.add('active');
+                document.getElementById('secret-player').play().catch(e => console.log("Play blocked"));
             }
         }
 
-        // Делаем кнопку "Обо мне" активной при старте
         document.getElementById('btn-about').classList.replace('text-gray-400', 'accent-text');
     </script>
 </body>
