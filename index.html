@@ -8,21 +8,29 @@
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <style>
+        <style>
         /* Анимация переключения вкладок */
         .section { display: none; }
         .section.active { display: block; animation: fadeIn 0.3s ease-in-out; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         
-        /* Динамические цвета (подстраиваются под тему Telegram) */
+        /* ПРИНУДИТЕЛЬНАЯ ТЕМНАЯ ТЕМА */
         body {
-            background-color: var(--tg-theme-bg-color, #1f2937);
-            color: var(--tg-theme-text-color, #ffffff);
+            background-color: #111827; /* Глубокий темный фон */
+            color: #ffffff;            /* Всегда белый текст */
         }
-        .bottom-nav { background-color: var(--tg-theme-secondary-bg-color, #111827); }
-        .card-bg { background-color: var(--tg-theme-secondary-bg-color, #374151); }
-        .accent-text { color: var(--tg-theme-link-color, #60a5fa); }
+        .bottom-nav { 
+            background-color: #1f2937; /* Темно-серая нижняя панель */
+            border-top: 1px solid #374151; /* Заметная граница меню */
+        } 
+        .card-bg { 
+            background-color: #1f2937; /* Темно-серые карточки */
+        }
+        .accent-text { 
+            color: #60a5fa;            /* Яркий голубой цвет для акцентов */
+        }
     </style>
+
 </head>
 <body class="pb-24 font-sans">
 
