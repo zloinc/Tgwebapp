@@ -1,0 +1,280 @@
+{
+  "pageTitle": "ipoStas'b Knowledgebase",
+  "assets": {
+    "avatar": "IMG_0567.png",
+    "background": "IMG_0570.png",
+    "secretTrack": "track.mp3"
+  },
+  "profile": {
+    "title": "TG:ipoStas'ь 👻",
+    "subtitle": "Crazy Artist @ Vertex.CGI",
+    "greeting": "Ну что ж, комрадс, давайте начнем? 👋",
+    "paragraphs": [
+      "Привет, я Стас! Работаю в Vertex.CGI с общим опытом в графике около 15 лет ⌛. Начинал ещё на заре Andrew Kramer 🎥 дошел до Lead Artist 🏆 в топ‑1 креативной студии по виральному контенту 🪄.",
+      "Обожаю работать в Cinema 4D 🚀 + Redshift 🔴. After Effects течет по венам, но открыт всему: Nuke 💣, Substance 🧪, Janga FX ✨ и плагины для Blender 🍰. Периодически записываю «дудориалы» на индусский манер.",
+      "Когда нужно «отключить мозг» 🧠 — ныряю в игры 🎮 (PUBG 🪂) или гоняю в волейбол 🏐."
+    ]
+  },
+  "tutorials": {
+    "title": "Дудориалы 🎬",
+    "items": [
+      {
+        "title": "👻 Sprite или Opacity",
+        "description": "определяемся как подключать и как это работает на оптимизацию рендера",
+        "actions": [
+          {
+            "label": "СМОТРЕТЬ",
+            "url": "https://t.me/ipoSTASb/191",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "🔍 Зум в камере C4D",
+        "description": "не знаете как зазумить футаж в камере чтоб точнее выстроить геометрию? показываю и рассказываю тут.",
+        "actions": [
+          {
+            "label": "ВИДЕО",
+            "url": "https://t.me/ipoSTASb/228",
+            "style": "primary"
+          },
+          {
+            "label": "СКРИПТ",
+            "url": "https://t.me/ipoSTASb/229",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "🕺 MoCap сервисы",
+        "description": "Тесты нейронок для мокапа",
+        "actions": [
+          {
+            "label": "СМОТРЕТЬ",
+            "url": "https://t.me/ipoSTASb/295",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "📏 Distance Node Redshift",
+        "description": "Полезная (иои не очень) нода для шейдинга. но пллучать интересные штуки можно точно.",
+        "actions": [
+          {
+            "label": "СМОТРЕТЬ",
+            "url": "https://t.me/ipoSTASb/306",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "💥 Разрушение с UV",
+        "description": "как не используя волюм билдер, уничтожать и деформировать объекты, сохраняя UV",
+        "actions": [
+          {
+            "label": "СМОТРЕТЬ",
+            "url": "https://t.me/ipoSTASb/309",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "🧪 Пипетка в C4D",
+        "description": "Клиент сказал: это не наш брендовый цвет! а вы в шоке? тут рассказываю как сделать пипетку здорового человека",
+        "actions": [
+          {
+            "label": "СМОТРЕТЬ",
+            "url": "https://t.me/ipoSTASb/320",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "💡 Фейковая каустика",
+        "description": "Красивая фейковая каустика в материале и рендер без боли в жопе",
+        "actions": [
+          {
+            "label": "ВИДЕО",
+            "url": "https://t.me/ipoSTASb/344",
+            "style": "primary"
+          },
+          {
+            "label": "ПРОЕКТ",
+            "url": "https://t.me/ipoSTASb/343",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "🏷️ Tension Tag",
+        "description": "показываю зря забытый старый тег и как с ним можео классно шейдить",
+        "actions": [
+          {
+            "label": "ВИДЕО",
+            "url": "https://t.me/ipoSTASb/358",
+            "style": "primary"
+          },
+          {
+            "label": "ПРОЕКТ",
+            "url": "https://t.me/ipoSTASb/359",
+            "style": "secondary"
+          }
+        ]
+      },
+      {
+        "title": "➰ Spline Modifier",
+        "description": "Разбор модификатора или как сделать горы используя сплайн",
+        "actions": [
+          {
+            "label": "СМОТРЕТЬ",
+            "url": "https://t.me/ipoSTASb/416",
+            "style": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "plugins": {
+    "title": "Плагины 🧩",
+    "items": [
+      {
+        "title": "🪄 SupaPupaMagic Adjust",
+        "tag": "After Effects",
+        "tagTone": "blue",
+        "description": "Магия AutoAdjust из Капката в один клик для любимой Аешечки",
+        "actions": [
+          {
+            "label": "ОБЗОР И СКАЧАТЬ",
+            "url": "https://t.me/ipoSTASb/422",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "🎚️ LazyLevels",
+        "tag": "After Effects",
+        "tagTone": "blue",
+        "description": "первая версия скрипта, который уже переродился в плагин. аналог Grade из нюка.",
+        "actions": [
+          {
+            "label": "ОБЗОР",
+            "url": "https://t.me/ipoSTASb/423",
+            "style": "outline"
+          },
+          {
+            "label": "JSX СКРИПТ",
+            "url": "https://t.me/ipoSTASb/424",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "🎚️ Lazy Levels Pro",
+        "tag": "After Effects",
+        "tagTone": "blue",
+        "description": "Бета 0.1 нового плагина для After Effects. Первая часть будущего Lazy Suit, протестирована на последнем AE.",
+        "actions": [
+          {
+            "label": "ОБЗОР И СКАЧАТЬ",
+            "url": "https://t.me/ipoSTASb/453",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "🎭 Agamograph Gen",
+        "tag": "Cinema 4D",
+        "tagTone": "orange",
+        "description": "ну тут надо загуглить вам что это и решить нужно ли : эффект агамографа в Синеме4Д",
+        "actions": [
+          {
+            "label": "СКАЧАТЬ СКРИПТ",
+            "url": "https://t.me/ipoSTASb/426",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "🎨 RS Material Loader",
+        "tag": "Redshift",
+        "tagTone": "red",
+        "description": "Удобный загрузчик материалов, всё сделает за вас: соберет, подключит, рампы накинет — как мистер Пропер, но для редшифта.",
+        "actions": [
+          {
+            "label": "СКАЧАТЬ ПЛАГИН",
+            "url": "https://t.me/ipoSTASb/468",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "✂️ LazyMaterialist",
+        "tag": "Cinema 4D",
+        "tagTone": "orange",
+        "description": "Разрез ворованных (или кривых) объектов по Polygon Islands и материалам.",
+        "actions": [
+          {
+            "label": "СКАЧАТЬ ПЛАГИН",
+            "url": "https://t.me/ipoSTASb/435",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "📽️ Lazy Projector",
+        "tag": "Cinema 4D",
+        "tagTone": "orange",
+        "description": "Набор тулзов для ленивых однокнопочных проекций",
+        "actions": [
+          {
+            "label": "СКАЧАТЬ АРХИВЫ",
+            "url": "https://t.me/ipoSTASb/441",
+            "style": "primary"
+          }
+        ]
+      }
+    ]
+  },
+  "bots": {
+    "title": "Боты 🤖",
+    "items": [
+      {
+        "icon": "🤖",
+        "title": "RS Render Bot",
+        "handle": "@rs_render_bot",
+        "description": "Следи за рендером прямо в Telegram. Уведомления о статусе и финише — больше не нужно сидеть у монитора.",
+        "actions": [
+          {
+            "label": "Запустить бота",
+            "url": "https://t.me/rs_render_bot",
+            "style": "primary",
+            "telegram": true
+          }
+        ]
+      },
+      {
+        "icon": "🤖",
+        "title": "Пушинг бот для ленивых",
+        "handle": "пушбот_l337",
+        "description": "Бот, который будет пушить вас постить в тг канал чаще, а то ты ничего не делаешь ленивая жопа! ",
+        "actions": [
+          {
+            "label": "ссылка на исходный код ",
+            "url": "https://t.me/ipoSTASb/466",
+            "style": "primary",
+            "telegram": true
+          }
+        ]
+      }
+    ]
+  },
+  "secret": {
+    "unlockTaps": 5,
+    "icon": "🕺",
+    "title": "Secret Club",
+    "subtitle": "Render-party starts now!",
+    "label": "Фанатам озона и ВБ",
+    "trackTitle": "скупим всё под этот трек!",
+    "backLabel": "Вернуться"
+  }
+}

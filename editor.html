@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Редактор Tgwebapp</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel-2: #1f2630;
+      --text: #f0f6fc;
+      --muted: #8b949e;
+      --line: #30363d;
+      --blue: #2f81f7;
+      --blue-dark: #1f6feb;
+      --red: #f85149;
+      --green: #3fb950;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 20px;
+      background: rgba(13, 17, 23, 0.92);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: 18px; }
+    h2 { font-size: 18px; margin-bottom: 12px; }
+    h3 { font-size: 15px; margin-bottom: 10px; }
+
+    main {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 20px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    nav {
+      position: sticky;
+      top: 76px;
+      align-self: start;
+      display: grid;
+      gap: 8px;
+    }
+
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      font-size: 14px;
+    }
+
+    section {
+      margin-bottom: 20px;
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      padding: 14px;
+      background: var(--panel-2);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    label {
+      display: grid;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: #0d1117;
+      color: var(--text);
+      padding: 10px 11px;
+      font: inherit;
+      line-height: 1.35;
+    }
+
+    textarea {
+      min-height: 92px;
+      resize: vertical;
+    }
+
+    button, .button {
+      border: 0;
+      border-radius: 8px;
+      background: var(--blue);
+      color: white;
+      padding: 10px 14px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    button:hover, .button:hover { background: var(--blue-dark); }
+    button.secondary { background: #30363d; }
+    button.secondary:hover { background: #3a424d; }
+    button.danger { background: transparent; color: var(--red); border: 1px solid rgba(248, 81, 73, 0.45); }
+    button.danger:hover { background: rgba(248, 81, 73, 0.12); }
+
+    .actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .status {
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .status.ok { color: var(--green); }
+    .status.error { color: var(--red); }
+    .full { grid-column: 1 / -1; }
+    .muted { color: var(--muted); font-size: 13px; line-height: 1.45; }
+
+    @media (max-width: 760px) {
+      header { align-items: stretch; flex-direction: column; }
+      main { grid-template-columns: 1fr; padding: 14px; }
+      nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Редактор страницы</h1>
+      <p class="muted">Правки сохраняются локально в content.json.</p>
+    </div>
+    <div class="actions">
+      <a class="button secondary" href="index.html" target="_blank">Открыть страницу</a>
+      <button id="save-button">Сохранить</button>
+    </div>
+  </header>
+
+  <main data-api="/api/content">
+    <nav>
+      <a href="#profile">Профиль</a>
+      <a href="#tutorials">Дудориалы</a>
+      <a href="#plugins">Плагины</a>
+      <a href="#bots">Боты</a>
+      <a href="#secret">Пасхалка</a>
+    </nav>
+
+    <div>
+      <p id="status" class="status"></p>
+      <section id="profile"></section>
+      <section id="tutorials"></section>
+      <section id="plugins"></section>
+      <section id="bots"></section>
+      <section id="secret"></section>
+    </div>
+  </main>
+
+  <script src="editor.js"></script>
+</body>
+</html>
