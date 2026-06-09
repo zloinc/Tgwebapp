@@ -232,6 +232,45 @@
             "style": "primary"
           }
         ]
+      },
+      {
+        "title": "Pin 1.2",
+        "tag": "Cinema 4D",
+        "tagTone": "orange",
+        "description": "страдали с тем, чтоб привязать какой-то объект к алембику или симульке? проблема решена. ",
+        "actions": [
+          {
+            "label": "ОТКРЫТЬ",
+            "url": "https://t.me/ipoSTASb/479",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "Smart Increment (IpoStased)",
+        "tag": "Cinema 4D",
+        "tagTone": "blue",
+        "description": "плагин для C4D, который делает ренеймы для всяких дубликатов файлов в синьке",
+        "actions": [
+          {
+            "label": "ОТКРЫТЬ",
+            "url": "https://t.me/ipoSTASb/481",
+            "style": "primary"
+          }
+        ]
+      },
+      {
+        "title": "LazyLightPainter 1.1 ",
+        "tag": "Cinema 4D",
+        "tagTone": "blue",
+        "description": "выставляем свет/ блики простыми кликами",
+        "actions": [
+          {
+            "label": "ОТКРЫТЬ",
+            "url": "https://t.me/ipoSTASb/496",
+            "style": "primary"
+          }
+        ]
       }
     ]
   },
