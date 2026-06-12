@@ -195,14 +195,14 @@
         ]
       },
       {
-        "title": "🎨 RS Material Loader",
+        "title": "🎨 Lazy Material Loader",
         "tag": "Redshift",
         "tagTone": "red",
         "description": "Удобный загрузчик материалов, всё сделает за вас: соберет, подключит, рампы накинет — как мистер Пропер, но для редшифта.",
         "actions": [
           {
             "label": "СКАЧАТЬ ПЛАГИН",
-            "url": "https://t.me/ipoSTASb/468",
+            "url": "https://t.me/ipoSTASb/500",
             "style": "primary"
           }
         ]
